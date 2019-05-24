@@ -1,0 +1,57 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void bubbleSort(int arr[], int n)
+{
+    int i, j, temp;
+    for (i=0; i<n; i++)
+    {
+        for (j=0; j<n-i-1; j++)
+        {
+            if (arr[j] > arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] = arr [j+1];
+                arr [j+1] = temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int s, i;
+    int Data[30];
+
+    cout << "Enter array size: ";
+    cin >> s;
+    cout << "\r" << endl;
+
+    cout << "Enter the " << s << " elements: ";
+
+    for (i=0; i<s; i++)
+    {
+      cin >> Data[i];
+    }
+
+    cout << "\n" << "Your Inputed Data is: ";
+    for (i=0; i<s; i++)
+    {
+      cout << Data[i] << " ";
+    }
+
+    bubbleSort(Data, s);
+
+    cout << "\n" << endl;
+    cout << "After using Bubble Sort... " << endl;
+    cout << "The Sorted Data: ";
+    for (i=0; i<s; i++)
+    {
+        cout << " " << Data[i];
+    }
+
+    _getch();
+    return 0;
+}
