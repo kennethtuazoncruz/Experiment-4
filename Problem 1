@@ -1,0 +1,112 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void add();
+void subtract();
+void multiply();
+void divide();
+void module();
+
+int main()
+{
+    int operation;
+    char cont = 'y';
+
+    cout << "MENU" << "\n" << "1. Add" << "\n" << "2. Subtract";
+    cout << "\n" << "3. Multiply" << "\n" << "4. Divide";
+    cout << "\n" << "5. Modulus" << endl;
+    cout << "\r" << endl;
+
+    while (cont == 'y' || cont == 'Y')
+    {
+    cout << "\r" << "Enter your choice: ";
+    cin >> operation;
+
+    switch (operation)
+    {
+        case 1:
+            add();
+            break;
+
+        case 2:
+            subtract();
+            break;
+
+        case 3:
+            multiply();
+            break;
+
+        case 4:
+            divide();
+            break;
+
+        case 5:
+            module();
+            break;
+
+        default:
+            cout << "Choice Error!";
+            break;
+
+    }
+
+    cont = 0;
+    cout << "\r" << endl;
+    cout << "Input y to continue:" << endl;
+    cout << "Continue?";
+    cin >> cont;
+    cout << "\r" << endl;
+
+    }
+    cout << "Thank you!" << endl;
+
+    _getch();
+    return 0;
+}
+
+void add()
+{
+    int a, b, sum;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    sum = a + b;
+    cout << "The result: " << sum << endl;
+}
+
+void subtract()
+{
+    int a, b, diff;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    diff = a - b;
+    cout << "The result: " << diff << endl;
+}
+
+void multiply()
+{
+    int a, b, prod;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    prod = a * b;
+    cout << "The result: " << prod << endl;
+}
+
+void divide()
+{
+    int a, b, quo;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    quo = a / b;
+    cout << "The result: " << quo << endl;
+}
+
+void module()
+{
+    int a, b, m;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    m = a % b;
+    cout << "The result: " << m << endl;
+}
